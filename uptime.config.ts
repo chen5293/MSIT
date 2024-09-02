@@ -1,17 +1,17 @@
 const pageConfig = {
-  // Title for your status page
+
   title: "MSIT监控页面",
-  // Links shown at the header of your status page, could set `highlight` to `true`
+ 
   links: [
     { link: 'https://github.com/lyc8503', label: 'GitHub' },
   ],
 }
 
 const workerConfig = {
-  // Write KV at most every 3 minutes unless the status changed
-  kvWriteCooldownMinutes: 3,
+
+  kvWriteCooldownMinutes: 1,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
-  // passwordProtection: 'username:password',
+   passwordProtection: 'discord:discord',
   // Define all your monitors here
   monitors: [
     // Example HTTP Monitor
@@ -30,7 +30,7 @@ const workerConfig = {
       statusPageLink: 'https://remote.ms188.com',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
      // expectedCodes: [200],
-      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 1000
       timeout: 10000,
       // [OPTIONAL] headers to be sent
       headers: {
@@ -38,9 +38,9 @@ const workerConfig = {
         Authorization: 'Bearer YOUR_TOKEN_HERE',
       },
       // [OPTIONAL] body to be sent
-      body: 'Hello, world!',
+    //  body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
-      responseKeyword: 'success',
+      //responseKeyword: 'success',
       // [OPTIONAL] if specified, the check will run in your specified region,
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
       checkLocationWorkerRoute: 'https://remote.ms188.com',
@@ -55,7 +55,7 @@ const workerConfig = {
       target: 'smtp.dap.support',
       tooltip: 'dap邮箱',
       statusPageLink: 'https://mail.dap.support',
-      timeout: 5000,
+      timeout: 500,
     },
   ],
   notification: {
