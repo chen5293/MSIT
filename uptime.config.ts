@@ -57,6 +57,17 @@ const workerConfig = {
       statusPageLink: 'https://mail.dap.support',
       timeout: 1000,
     },
+     {
+      id: 'google',
+      name: 'google',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: 'www.google.com',
+      tooltip: 'google',
+      statusPageLink: 'www.google.com',
+      timeout: 1000,
+    },
   ],
   notification: {
     // [Optional] apprise API server URL
