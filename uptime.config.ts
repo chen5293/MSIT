@@ -21,11 +21,11 @@ const workerConfig = {
       // `name` is used at status page and callback message
       name: '远程线路',
       // `method` should be a valid HTTP Method
-      method: 'POST',
+      method: 'GET',
       // `target` is a valid URL
       target: 'https://remote.ms188.com',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
+      tooltip: '这是一条远程线路',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://remote.ms188.com',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
@@ -45,16 +45,16 @@ const workerConfig = {
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
       checkLocationWorkerRoute: 'https://remote.ms188.com',
     },
-    // Example TCP Monitor
+    // dap邮箱
     {
       id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
+      name: 'smtp.dap.support',
       // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
+      method: 'GET',
       // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
+      target: 'smtp.dap.support',
+      tooltip: 'dap邮箱',
+      statusPageLink: 'https://mail.dap.support',
       timeout: 5000,
     },
   ],
