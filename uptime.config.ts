@@ -63,9 +63,9 @@ const workerConfig = {
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: 'www.google.com',
+      target: 'https://www.google.com/',
       tooltip: 'google',
-      statusPageLink: 'www.google.com',
+      statusPageLink: 'https://www.google.com/',
       timeout: 1000,
     },
   ],
