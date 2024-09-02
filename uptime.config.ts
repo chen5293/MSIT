@@ -3,7 +3,7 @@ const pageConfig = {
   title: "MSIT监控页面",
  
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
+    { link: '', label: '未定义' },
   ],
 }
 
@@ -11,7 +11,7 @@ const workerConfig = {
 
   kvWriteCooldownMinutes: 1,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
-   passwordProtection: 'discord:discord',
+   passwordProtection: 'msit:ms188.com',
   // Define all your monitors here
   monitors: [
     // Example HTTP Monitor
@@ -31,7 +31,7 @@ const workerConfig = {
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
      // expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 1000
-      timeout: 10000,
+      timeout: 1000,
       // [OPTIONAL] headers to be sent
       headers: {
         'User-Agent': 'Uptimeflare',
@@ -50,12 +50,12 @@ const workerConfig = {
       id: 'test_tcp_monitor',
       name: 'smtp.dap.support',
       // `method` should be `TCP_PING` for tcp monitors
-      method: 'GET',
+      method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
       target: 'smtp.dap.support',
       tooltip: 'dap邮箱',
       statusPageLink: 'https://mail.dap.support',
-      timeout: 500,
+      timeout: 1000,
     },
   ],
   notification: {
