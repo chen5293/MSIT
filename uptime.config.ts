@@ -6,7 +6,7 @@ const pageConfig = {
     { link: 'https://github.com/lyc8503', label: 'GitHub' },
   ],
 }
-API
+
 const workerConfig = {
   // Write KV at most every 3 minutes unless the status changed
   kvWriteCooldownMinutes: 3,
