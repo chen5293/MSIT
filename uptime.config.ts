@@ -11,17 +11,17 @@ const workerConfig = {
 
   kvWriteCooldownMinutes: 1,
   // Enable HTTP Basic auth for status page & API by uncommenting the line below, format `<USERNAME>:<PASSWORD>`
-   passwordProtection: 'msit:ms188.com',
+   // passwordProtection: 'msit:ms188.com',
   // Define all your monitors here
   monitors: [
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
+      id: 'remote.ms188.com',
       // `name` is used at status page and callback message
       name: '远程线路',
       // `method` should be a valid HTTP Method
-      method: 'GET',
+      method: 'TCP_PING',
       // `target` is a valid URL
       target: 'https://remote.ms188.com',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
@@ -43,16 +43,16 @@ const workerConfig = {
       //responseKeyword: 'success',
       // [OPTIONAL] if specified, the check will run in your specified region,
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
-      checkLocationWorkerRoute: 'https://remote.ms188.com',
+      //checkLocationWorkerRoute: 'https://remote.ms188.com',
     },
     // dap邮箱
     {
-      id: 'test_tcp_monitor',
-      name: 'smtp.dap.support',
+      id: 'dap.support',
+      name: 'mail.dap.support',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: 'smtp.dap.support',
+      target: 'mail.dap.support',
       tooltip: 'dap邮箱',
       statusPageLink: 'https://mail.dap.support',
       timeout: 1000,
